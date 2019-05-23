@@ -2,19 +2,20 @@ import React, { Component } from 'react';
 import { 
     StyleSheet, 
     Text, 
-    View, 
-    TextInput, 
-    ScrollView, 
+    Image,
     TouchableOpacity,
-    TextComponent, 
+    
 } from 'react-native'
 
-class Button extends Component {
+class Button extends Component{
   render() {
       return(
         <TouchableOpacity 
-        style ={styles.buttonStyle}>
-            <Text style={styles.textStyle}> Button </Text>
+        style ={styles[this.props.buttonType]}>
+            <Image
+              source={this.props.itemIcon}
+              style={styles.image}
+            />
         </TouchableOpacity>
       );
   }
@@ -22,18 +23,28 @@ class Button extends Component {
 
 const styles = StyleSheet.create({
     textStyle: {
-        color:'white', 
-        textAlign:'center',
-        fontSize:16,
+      color:'white', 
+      textAlign:'center',
+      fontSize:16,
     },
     buttonStyle: {
-        flex:1,
-        backgroundColor:'dodgerblue',
-        height: 60,
-        justifyContent: "center",
-        borderColor: "white",
-        borderWidth: 0.5
+      flex:1,
+      backgroundColor:'dodgerblue',
+      height: 60,
+      justifyContent: "center",
+      borderColor: "white",
+      borderWidth: 0.5,
     },
+    homeButton: {
+      justifyContent: "center",
+      alignContent: 'center',
+      flexDirection: 'row',
+      padding:40
+    },
+    image: {
+      borderColor: '#fff',
+      borderWidth: 1,
+    }
   });
 
 export default Button;

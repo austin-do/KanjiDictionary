@@ -17,8 +17,8 @@ class Main extends Component {
       <View 
         style={{flex:1}}>
         <View style={styles.menuBar}>
-          <View style ={{flex:1, justifyContent: "center"}}> 
-          <Text>KanjiApp</Text>
+          <View style ={{flex:1,flexDirection: "row" ,justifyContent: "center"}}> 
+          <Text style ={{color: "white", fontSize: 20}}>KanjiApp</Text>
           </View>
           
             
@@ -34,9 +34,9 @@ class Main extends Component {
           
         </View>
         <View style={styles.menuBar2}>
-        <Button></Button>
-        <Button></Button>
-        <Button></Button>
+        <Button buttonType= 'menuButton' itemIcon={require('D:/Users/Austin/App/KanjiApp/app/icons/settings.png')}/>
+        <Button buttonType= 'menuButton' itemIcon={require('D:/Users/Austin/App/KanjiApp/app/icons/camera.png')}/>
+        <Button buttonType= 'menuButton' itemIcon={require('D:/Users/Austin/App/KanjiApp/app/icons/palette.png')}/>
         </View>
       </View>
     )
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   },
   drawWindow: {
     backgroundColor:"white",
-    flex:5,
+    flex:6,
     borderRadius: 8,
     margin: 10
   },
