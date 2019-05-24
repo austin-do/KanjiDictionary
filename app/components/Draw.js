@@ -5,13 +5,9 @@ import {
   StyleSheet, 
   Text, 
   View, 
-  TextInput, 
-  ScrollView, 
-  TouchableOpacity,
-  TextComponent, 
 } from 'react-native'
 
-class Draw extends Component {
+class Main extends Component {
   render() {
     return (
       <View 
@@ -74,4 +70,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Draw;
+export default Main;

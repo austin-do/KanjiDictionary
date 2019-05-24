@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Button from './Button';
+import { createStackNavigator, createAppContainer,StackActions,NavigationActions } from "react-navigation";
+
 
 import { 
   StyleSheet, 
@@ -10,6 +12,9 @@ import {
 } from 'react-native'
 
 class Home extends Component {
+    static navigationOptions =  {
+        header: null
+    }
   render() {
     return (
       <ImageBackground
@@ -20,8 +25,16 @@ class Home extends Component {
                     <Text style={styles.header}>K A N J I</Text>
                 </View>
                 <View style = {styles.menuContainer}>
-                    <Button buttonType="homeButton" itemIcon={require('D:/Users/Austin/App/KanjiApp/app/icons/camera.png')}/>             
-                    <Button buttonType="homeButton" itemIcon={require('D:/Users/Austin/App/KanjiApp/app/icons/palette.png')}/>             
+                    <Button 
+                        onPress={() => this.props.navigation.navigate('Draw')} 
+                        buttonType="homeButton" 
+                        itemIcon={require('D:/Users/Austin/App/KanjiApp/app/icons/camera.png')}
+                    />             
+                    <Button 
+                        onPress = {() => {alert("nice");}} 
+                        buttonType="homeButton" 
+                        itemIcon={require('D:/Users/Austin/App/KanjiApp/app/icons/palette.png')}
+                    />             
                 </View>
             </View>
       </ImageBackground>

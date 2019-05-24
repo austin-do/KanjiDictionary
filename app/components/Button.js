@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { 
     StyleSheet, 
-    Text, 
     Image,
     TouchableOpacity,
     
@@ -10,8 +10,7 @@ import {
 class Button extends Component{
   render() {
       return(
-        <TouchableOpacity 
-        style ={styles[this.props.buttonType]}>
+        <TouchableOpacity onPress={this.props.onPress} style ={styles[this.props.buttonType]}>
             <Image
               source={this.props.itemIcon}
               style={styles.image}
@@ -43,7 +42,7 @@ const styles = StyleSheet.create({
     },
     image: {
       borderColor: '#fff',
-      borderWidth: 1,
+      borderWidth: 0,
     }
   });
 
